@@ -12,6 +12,7 @@ jobs:
         run: |
           cat output.log
   Same-Workflow:
+    runs-on: ubuntu-latest
     steps:
       - shell: bash
         run: cat output.log
