@@ -9,4 +9,9 @@ jobs:
         run: |
           expr 1 + 1 > output.log
       - shell: bash
+        run: |
+          cat output.log
+  Same-Workflow:
+    steps:
+      - shell: bash
         run: cat output.log
