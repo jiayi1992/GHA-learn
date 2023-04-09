@@ -1,0 +1,11 @@
+name: Data Share
+run-name: ${{ github.actor }} is testing out data share 🚀
+on: [push]
+jobs:
+  Same-Job:
+    steps:
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+      - shell: bash
+        run: cat output.log
