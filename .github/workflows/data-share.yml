@@ -11,8 +11,18 @@ jobs:
       - shell: bash
         run: |
           cat output.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-log-file
+          path: output.log
   Same-Workflow:
     runs-on: ubuntu-latest
+    needs: Same-Job
     steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: output-log-file
       - shell: bash
         run: cat output.log
