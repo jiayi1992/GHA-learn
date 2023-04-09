@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} is testing out data share 🚀
 on: [push]
 jobs:
   Same-Job:
+    runs-on: ubuntu-latest
     steps:
       - shell: bash
         run: |
